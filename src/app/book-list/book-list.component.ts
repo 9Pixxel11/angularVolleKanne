@@ -1,5 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {BookDataService} from "../shared/book-data.service";
+import {IBook} from "../shared/ibook";
 
 @Component({
   selector: 'book-list',
@@ -11,14 +12,14 @@ export class BookListComponent implements OnInit {
 
   @Input() bookTitle: string;
   @Output() titleClicked = new EventEmitter<string>();
+  
+  booksList: IBook[];
 
-  books = [];
-
-  constructor(private bookData: BookDataService) {
-    this.books = bookData.getBooks();
-  }
+  constructor(private bookData: BookDataService) { }
 
   ngOnInit() {
+    this.bookData.getBooks()
+      .subscribe(b => this.booksList = b);
   }
 
 }
