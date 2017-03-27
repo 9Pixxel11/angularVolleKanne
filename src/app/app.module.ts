@@ -5,20 +5,28 @@ import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
-import { BookListComponent } from './book-list/book-list.component';
+import { BookListComponent } from './books/components/book-list/book-list.component';
 import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
 import { BookDataService } from './shared/book-data.service';
+import { bookRouting} from "./app-routing.module";
+import { TextAreaComponent } from './text-area/text-area.component';
+import { BooksComponent } from "./books/books.component";
+import { BookDetailsComponent } from './books/components/book-details/book-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TextAreaComponent,
     BookListComponent,
-    MouseCursorComponent
+    BooksComponent,
+    MouseCursorComponent,
+    BookDetailsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    bookRouting
   ],
   providers: [BookDataService],
   bootstrap: [AppComponent]

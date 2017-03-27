@@ -6,6 +6,6 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Info Box Tutorial';
-  localVariableOnComponent = "This is a Book-Title";
+
+
 }

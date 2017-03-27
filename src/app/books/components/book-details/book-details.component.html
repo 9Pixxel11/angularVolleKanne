@@ -1,0 +1,9 @@
+<h3>Book-Details</h3>
+<ul class="list-group" *ngIf="book">
+  <li class="list-group-item list-group-item-info"> {{book.title}} </li>
+  <li class="list-group-item"> {{book.isbn}} </li>
+  <li class="list-group-item"> {{book.author}} </li>
+</ul>
+<hr>
+<button class="btn btn-primary" (click)="navBack()">Zurück</button>
+

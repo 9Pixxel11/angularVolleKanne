@@ -1,9 +1,5 @@
-<h3 (click)="titleClicked.emit($event)">{{bookTitle}}</h3>
-
 <button class="btn btn-primary" (click)="isHidden=!isHidden">Hide</button>
-
 <hr>
-
 <div [hidden]="isHidden">
   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
   et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
@@ -12,12 +8,4 @@
   sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
   takimata sanctus est Lorem ipsum dolor sit amet.
 </div>
-
 <hr>
-
-<ul class="list-group" *ngFor="let book of booksList">
-  <li class="list-group-item list-group-item-info"> {{ book.title }} </li>
-  <li class="list-group-item"> {{ book.isbn }} </li>
-  <li class="list-group-item"> {{ book.author }} </li>
-</ul>
-
